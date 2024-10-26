@@ -1,4 +1,11 @@
-procedure filterAnyData(optFltr: string; DataSet: Tdataset;
+unit filterAnyData;
+
+interface
+  uses Winapi.Messages, System.SysUtils,Vcl.Dialogs,Data.DB;
+implementation
+
+
+  procedure filterAnyData2(optFltr: string; DataSet: Tdataset;
   fieldNames: array of string; Value: string);
 var
   filterstr: string;
@@ -37,3 +44,4 @@ begin
       showmessage('[#filterAnyData ]' + e.message)
   end;
 end;
+end.
